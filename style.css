@@ -34,6 +34,7 @@ body {
     grid-gap: 10px;
     margin-bottom: 16px;
     flex-wrap: wrap;
+    width: 100%;
 }
 
 .toolbar .head > input {
@@ -44,11 +45,14 @@ body {
     outline: none;
 }
 
+.toolbar .head #filename:focus {
+    background: #fff7d0;
+}
+
 .toolbar .head select {
     text-align-last:center;
     width: 100px;
     padding: 6px 10px;
-    justify-content: right;
     border: 1px solid #ddd;
     border-radius: 6px;
     outline: none;
@@ -56,6 +60,16 @@ body {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+}
+.toolbar .head .save {
+    padding-left: 312px;
+    color: #fff7d0;
+}
+.toolbar .head .save select {
+    background: #cecece;
+}
+.toolbar .head .save select:hover {
+    background: #ff9e1f;
 }
 
 .toolbar .head select:hover {
@@ -76,7 +90,7 @@ body {
 }
 
 .toolbar .head .color input {
-    width: 50%;     /* por defecto el color input es rectangular */
+    width: 50%;     /* por defecto el swatch input color es rectangular */
     border: none;
     background: #eee;
     cursor: pointer;
@@ -122,4 +136,10 @@ body {
 #content {
     padding: 16px;
     outline: none;
+    color: #cacaca;
+    font-weight: 350;
+}
+
+#content:focus {
+    color: #888;
 }

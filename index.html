@@ -33,18 +33,20 @@
                 </select>
                         <div class="color">
                                 <span>Color</span>
-                            <input type="color" oninput="formatDoc('foreColor', this.value); this.selectedIndex=0;">
+                            <input type="color" value="#888888" oninput="formatDoc('foreColor', this.value); this.selectedIndex=0;">
                         </div>
                         <div class="color">
                                 <span>Fondo</span>
                             <input type="color" value="#ffffff" oninput="formatDoc('hiliteColor', this.value); this.selectedIndex=0;">
                         </div>
-               <select onchange="fileHandle(this.value); this.selectedIndex=0;">
-                <option value="" selected="" hidden="" disabled="">Guardar</option>
-                <option value="new">Nuevo</option>
-                <option value="txt">Guardar como txt</option>
-                <option value="pdf">Guardar como pdf</option>
-            </select>
+                        <div class="save">
+                            <select onchange="fileHandle(this.value); this.selectedIndex=0;">
+                            <option value="" selected="" hidden="" disabled="">Guardar</option>
+                            <option value="new">Nuevo</option>
+                            <option value="txt">Guardar como txt</option>
+                            <option value="pdf">Guardar como pdf</option>
+                            </select>
+                        </div>
             </div>
             <div class="btn-toolbar">
                 <button onclick="formatDoc('undo')"><i class='bx bx-undo' ></i></button>
